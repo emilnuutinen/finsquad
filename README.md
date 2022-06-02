@@ -7,7 +7,7 @@ Model: https://huggingface.co/TurkuNLP/bert-base-finnish-uncased-v1
 ```bash
 python run_qa.py \
   --model_name_or_path bert-base-finnish-cased-v1 \
-  --dataset_name squad2_fi \
+  --dataset_name squad2_fi.py \
   --version_2_with_negative \
   --do_train \
   --do_eval \
@@ -17,5 +17,16 @@ python run_qa.py \
   --max_seq_length 384 \
   --doc_stride 128 \
   --max_train_samples 5 \
+  --output_dir /tmp/debug_squad/
+```
+
+Only evaluation:
+
+```bash
+python run_qa.py \
+  --model_name_or_path bert-base-finnish-cased-v1/ \
+  --dataset_name squad2_fi.py \
+  --version_2_with_negative \
+  --do_eval \
   --output_dir /tmp/debug_squad/
 ```

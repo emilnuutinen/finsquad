@@ -75,7 +75,6 @@ class SquadV2(datasets.GeneratorBasedBuilder):
 
     def _generate_examples(self, filepath):
         """Yields examples."""
-        # TODO(squad_v2): Yields (key, example) tuples from the dataset
         with open(filepath, encoding="utf-8") as f:
             squad = json.load(f)
             for example in squad["data"]:
@@ -89,7 +88,7 @@ class SquadV2(datasets.GeneratorBasedBuilder):
 
                         answer_starts = [answer["answer_start"]
                                          for answer in qa["answers"]]
-                        answers = [answer["text"] for answer in qa["answers"]]
+                        answers = [answer["text"].strip() for answer in qa["answers"]]
 
                         # Features currently used are "context", "question", and "answers".
                         # Others are extracted here for the ease of future expansions.

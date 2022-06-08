@@ -1,10 +1,10 @@
-# Result tables for different models on SQuAD
+# SQuAD models & datasets comparison
 
-### FinSQuAD against other baselines (SQuAD 2, English)
+### FinSQuAD (SQuAD 2.0, Finnish MT) against other baselines (SQuAD 2.0, English)
 
 |                        	| FinSQuAD 	| BERT-base 	| BERT-medium | BERT-large  | BERT-large* | ALBERT-XL   |
 |------------------------	|----------	|-----------	|-----------	|-----------	|------------ |----------   |
-| Training script         |  run_qa   |   run_qa    |             |   run_qa    |   run_qa    |   run_qa    |
+| Training script         |  run_qa   |   run_qa    |   run_qa    |   run_qa    |   run_qa    |   run_qa    |
 | eval_HasAns_exact      	|  57.4606 	|   72.3853 	|   67.7968  	|   73.7348 	|   80.5836   |   80.6848   |
 | eval_HasAns_f1         	|  68.8472 	|   79.2090 	|   76.1287  	|   79.6422  	|   86.6459 	|   86.7824   |
 | eval_HasAns_total      	|     5844 	|      5928 	|   5928     	|   5928    	|   5928     	|   5928      |
@@ -20,8 +20,8 @@
 | eval_samples           	|    12166 	|     12134 	|            	|           	|   12134    	|             |
 | eval_total             	|    11873 	|     11873 	|   11873   	|   11873    	|   11873    	|   11873     |
 
-- FinSQuAD & Bert-base are trained by me with identical training setups.
-- [BERT-medium](https://huggingface.co/mrm8488/bert-medium-finetuned-squadv2) (Training setup unknown)
+- FinSQuAD & Bert-base are trained by me with identical training parameters.
+- [BERT-medium](https://huggingface.co/mrm8488/bert-medium-finetuned-squadv2)
 - [BERT-large](https://huggingface.co/madlag/bert-large-uncased-squadv2)
 - [BERT-large*](https://huggingface.co/madlag/bert-large-uncased-whole-word-masking-finetuned-squadv2) (whole word masking)
 - [ALBERT-XL](https://huggingface.co/ktrapeznikov/albert-xlarge-v2-squad-v2)

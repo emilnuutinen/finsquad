@@ -20,8 +20,8 @@
 | eval_samples           	|    12166 	|     12134 	|            	|           	|   12134    	|             |
 | eval_total             	|    11873 	|     11873 	|   11873   	|   11873    	|   11873    	|   11873     |
 
-
-- [BERT-medium](https://huggingface.co/mrm8488/bert-medium-finetuned-squadv2)
+- FinSQuAD & Bert-base are trained by me with identical training setups.
+- [BERT-medium](https://huggingface.co/mrm8488/bert-medium-finetuned-squadv2) (Training setup unknown)
 - [BERT-large](https://huggingface.co/madlag/bert-large-uncased-squadv2)
 - [BERT-large*](https://huggingface.co/madlag/bert-large-uncased-whole-word-masking-finetuned-squadv2) (whole word masking)
 - [ALBERT-XL](https://huggingface.co/ktrapeznikov/albert-xlarge-v2-squad-v2)

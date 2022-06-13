@@ -88,7 +88,7 @@ class SquadV2(datasets.GeneratorBasedBuilder):
 
                         answer_starts = [answer["answer_start"]
                                          for answer in qa["answers"]]
-                        answers = [answer["text"].strip() for answer in qa["answers"]]
+                        answers = [answer["text"].strip(' .,-:') for answer in qa["answers"]]
 
                         # Features currently used are "context", "question", and "answers".
                         # Others are extracted here for the ease of future expansions.

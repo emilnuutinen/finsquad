@@ -2,23 +2,23 @@
 
 ### FinSQuAD (SQuAD 2.0, Finnish MT) against other baselines (SQuAD 2.0, English)
 
-|                        	| FinSQuAD 	| BERT-base 	| BERT-medium | BERT-large  | BERT-large* | ALBERT-XL   |
-|------------------------	|----------	|-----------	|-----------	|-----------	|------------ |----------   |
+|                         | FinSQuAD  | BERT-base   | BERT-medium | BERT-large  | BERT-large* | ALBERT-XL   |
+|------------------------ |---------- |-----------  |-----------  |-----------  |------------ |----------   |
 | training script         |  run_qa   |   run_qa    |   run_qa    |   run_qa    |   run_qa    |   run_qa    |
-| has answer exact      	|  57.4606 	|   72.3853 	|   67.7968  	|   73.7348 	|   80.5836   |   80.6848   |
-| has answer f1         	|  68.8472 	|   79.2090 	|   76.1287  	|   79.6422  	|   86.6459 	|   86.7824   |
-| has answer total      	|     5844 	|      5928 	|   5928     	|   5928    	|   5928     	|   5928      |
-| no answer exact       	|  77.9731 	|   76.0807 	|   64.1211  	|   83.5155  	|   85.0630 	|   88.1412   |
-| no answer f1          	|  77.9731 	|   76.0807 	|   64.1211  	|   83.5155  	|   85.0630  	|   88.1412  	|
-| no answer total       	|     6029 	|      5945 	|   5945     	|   5945     	|   5945     	|   5945     	|
-| best exact        	    |  67.8767 	|   74.2357 	|   65.9647  	|   78.6321  	|   82.8265  	|   84.4184  	|
-| best exact thresh 	    |      0.0 	|       0.0 	|   0.0      	|   0.0      	|   0.0      	|   0.0      	|
-| best f1           	    |  73.4813 	|   77.6426 	|   70.1247  	|   81.5816  	|   85.8533  	|   87.4628   |
-| best f1 thresh    	    |      0.0 	|       0.0 	|   0.0      	|   0.0      	|   0.0      	|   0.0       |
-| exact match             |  67.8767 	|   74.2357 	|   65.9563  	|   78.6321  	|   82.8265  	|   84.4184   |
-| f1                	    |  73.4813 	|   77.6426 	|   70.1163  	|   81.5816  	|   85.8533 	|   87.4628   |
-| samples           	    |    12166 	|     12134 	|            	|           	|   12134    	|             |
-| total             	    |    11873 	|     11873 	|   11873   	|   11873    	|   11873    	|   11873     |
+| has answer exact        |  57.4606  |   72.3853   |   67.7968   |   73.7348   |   80.5836   |   80.6848   |
+| has answer f1           |  68.8472  |   79.2090   |   76.1287   |   79.6422   |   86.6459   |   86.7824   |
+| has answer total        |     5844  |      5928   |   5928      |   5928      |   5928      |   5928      |
+| no answer exact         |  77.9731  |   76.0807   |   64.1211   |   83.5155   |   85.0630   |   88.1412   |
+| no answer f1            |  77.9731  |   76.0807   |   64.1211   |   83.5155   |   85.0630   |   88.1412   |
+| no answer total         |     6029  |      5945   |   5945      |   5945      |   5945      |   5945      |
+| best exact              |  67.8767  |   74.2357   |   65.9647   |   78.6321   |   82.8265   |   84.4184   |
+| best exact thresh       |      0.0  |       0.0   |   0.0       |   0.0       |   0.0       |   0.0       |
+| best f1                 |  73.4813  |   77.6426   |   70.1247   |   81.5816   |   85.8533   |   87.4628   |
+| best f1 thresh          |      0.0  |       0.0   |   0.0       |   0.0       |   0.0       |   0.0       |
+| exact match             |  67.8767  |   74.2357   |   65.9563   |   78.6321   |   82.8265   |   84.4184   |
+| f1                      |  73.4813  |   77.6426   |   70.1163   |   81.5816   |   85.8533   |   87.4628   |
+| samples                 |    12166  |     12134   |             |             |   12134     |             |
+| total                   |    11873  |     11873   |   11873     |   11873     |   11873     |   11873     |
 
 - FinSQuAD & Bert-base are trained by me with identical training parameters.
 - [BERT-medium](https://huggingface.co/mrm8488/bert-medium-finetuned-squadv2)
@@ -37,4 +37,24 @@
 - [Indobert-qa](https://huggingface.co/Rifky/Indobert-QA) Indonesian
 - [ParSQuAD](https://ieeexplore.ieee.org/document/9443126) Persian
 - [Swe-BERT](https://towardsdatascience.com/swedish-question-answering-with-bert-c856ccdcc337) Swedish
+
+```bash
+***** eval metrics *****
+  epoch                  =     2.0
+  eval_HasAns_exact      = 66.9405
+  eval_HasAns_f1         = 80.0334
+  eval_HasAns_total      =    5844
+  eval_NoAns_exact       =  59.728
+  eval_NoAns_f1          =  59.728
+  eval_NoAns_total       =    6029
+  eval_best_exact        = 50.8212
+  eval_best_exact_thresh =     0.0
+  eval_best_f1           = 51.5629
+  eval_best_f1_thresh    =     0.0
+  eval_exact             =  63.278
+  eval_f1                = 69.7225
+  eval_samples           =   12166
+  eval_total             =   11873
+```
+
 

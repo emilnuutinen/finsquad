@@ -4,19 +4,19 @@
 
 |                         | FinSQuAD  | BERT-base   | BERT-medium | BERT-large  | BERT-large* | ALBERT-XL   |
 |------------------------ |---------- |-----------  |-----------  |-----------  |------------ |----------   |
-| training script         |  run_qa   |   run_qa    |   run_qa    |   run_qa    |   run_qa    |   run_qa    |
-| has answer exact        |  57.4606  |   72.3853   |   67.7968   |   73.7348   |   80.5836   |   80.6848   |
-| has answer f1           |  68.8472  |   79.2090   |   76.1287   |   79.6422   |   86.6459   |   86.7824   |
+| training script         |   run_qa  |    run_qa   |    run_qa   |    run_qa   |    run_qa   |    run_qa   |
+| has answer exact        |  58.3162  |   72.3853   |   67.7968   |   73.7348   |   80.5836   |   80.6848   |
+| has answer f1           |  69.2991  |   79.2090   |   76.1287   |   79.6422   |   86.6459   |   86.7824   |
 | has answer total        |     5844  |      5928   |   5928      |   5928      |   5928      |   5928      |
-| no answer exact         |  77.9731  |   76.0807   |   64.1211   |   83.5155   |   85.0630   |   88.1412   |
-| no answer f1            |  77.9731  |   76.0807   |   64.1211   |   83.5155   |   85.0630   |   88.1412   |
+| no answer exact         |  77.8073  |   76.0807   |   64.1211   |   83.5155   |   85.0630   |   88.1412   |
+| no answer f1            |  77.8073  |   76.0807   |   64.1211   |   83.5155   |   85.0630   |   88.1412   |
 | no answer total         |     6029  |      5945   |   5945      |   5945      |   5945      |   5945      |
-| best exact              |  67.8767  |   74.2357   |   65.9647   |   78.6321   |   82.8265   |   84.4184   |
+| best exact              |  68.2136  |   74.2357   |   65.9647   |   78.6321   |   82.8265   |   84.4184   |
 | best exact thresh       |      0.0  |       0.0   |   0.0       |   0.0       |   0.0       |   0.0       |
-| best f1                 |  73.4813  |   77.6426   |   70.1247   |   81.5816   |   85.8533   |   87.4628   |
+| best f1                 |  73.6195  |   77.6426   |   70.1247   |   81.5816   |   85.8533   |   87.4628   |
 | best f1 thresh          |      0.0  |       0.0   |   0.0       |   0.0       |   0.0       |   0.0       |
-| exact match             |  67.8767  |   74.2357   |   65.9563   |   78.6321   |   82.8265   |   84.4184   |
-| f1                      |  73.4813  |   77.6426   |   70.1163   |   81.5816   |   85.8533   |   87.4628   |
+| exact match             |  68.2136  |   74.2357   |   65.9563   |   78.6321   |   82.8265   |   84.4184   |
+| f1                      |  73.6195  |   77.6426   |   70.1163   |   81.5816   |   85.8533   |   87.4628   |
 | samples                 |    12166  |     12134   |             |             |   12134     |             |
 | total                   |    11873  |     11873   |   11873     |   11873     |   11873     |   11873     |
 
@@ -26,35 +26,34 @@
 - [BERT-large*](https://huggingface.co/madlag/bert-large-uncased-whole-word-masking-finetuned-squadv2) (whole word masking)
 - [ALBERT-XL](https://huggingface.co/ktrapeznikov/albert-xlarge-v2-squad-v2)
 
-### FinSQuAD against other translated datasets/models (SQuAD 2.0)
+### FinSQuAD-base against other translated datasets/models (SQuAD 2.0)
 
 |     | FinSQuAD     | BERT-base es | Indobert-qa | ParSQuAD    | Swe-BERT    |
 |---  |----------    |------------  |------------ |------------ |------------ |
-| em  |   67.88      |   63.36      |   51.61     |   62.42     |   66.73     |
-| f1  |   73.48      |   70.22      |   69.09     |   65.26     |   70.11     |
+| em  |   68.21      |   63.36      |   51.61     |   62.42     |   66.73     |
+| f1  |   73.62      |   70.22      |   69.09     |   65.26     |   70.11     |
 
 - [BERT-base es](https://huggingface.co/MMG/bert-base-spanish-wwm-cased-finetuned-sqac-finetuned-squad2-es) Spanish
 - [Indobert-qa](https://huggingface.co/Rifky/Indobert-QA) Indonesian
 - [ParSQuAD](https://ieeexplore.ieee.org/document/9443126) Persian
 - [Swe-BERT](https://towardsdatascience.com/swedish-question-answering-with-bert-c856ccdcc337) Swedish
 
-```bash
-***** eval metrics *****
-  epoch                  =     2.0
-  eval_HasAns_exact      = 66.9405
-  eval_HasAns_f1         = 80.0334
-  eval_HasAns_total      =    5844
-  eval_NoAns_exact       =  59.728
-  eval_NoAns_f1          =  59.728
-  eval_NoAns_total       =    6029
-  eval_best_exact        = 50.8212
-  eval_best_exact_thresh =     0.0
-  eval_best_f1           = 51.5629
-  eval_best_f1_thresh    =     0.0
-  eval_exact             =  63.278
-  eval_f1                = 69.7225
-  eval_samples           =   12166
-  eval_total             =   11873
-```
+### FinSQuAD versions
 
-
+|                         |  No space |  Cleaned |    Large |
+|------------------------ |---------- |----------|----------|
+| training script         |   run_qa  |   run_qa |   run_qa |
+| has answer exact        |  57.4606  |  58.3162 |  61.9268 |
+| has answer f1           |  68.8472  |  69.2991 |  74.2609 |
+| has answer total        |     5844  |     5844 |     5844 |
+| no answer exact         |  77.9731  |  77.8073 |  77.7409 |
+| no answer f1            |  77.9731  |  77.8073 |  77.7049 |
+| no answer total         |     6029  |     6029 |     6029 |
+| best exact              |  67.8767  |  68.2136 |  69.9570 |
+| best exact thresh       |      0.0  |      0.0 |      0.0 |
+| best f1                 |  73.4813  |  73.6195 |  76.0280 |
+| best f1 thresh          |      0.0  |      0.0 |      0.0 |
+| exact match             |  67.8767  |  68.2136 |  69.9570 |
+| f1                      |  73.4813  |  73.6195 |  76.0280 |
+| samples                 |    12166  |    12166 |    12166 |
+| total                   |    11873  |    11873 |    11873 |

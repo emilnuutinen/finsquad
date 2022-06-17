@@ -40,20 +40,24 @@
 
 ### FinSQuAD versions
 
-|                         |  No space |  Cleaned |    Large |
-|------------------------ |---------- |----------|----------|
-| training script         |   run_qa  |   run_qa |   run_qa |
-| has answer exact        |  57.4606  |  58.3162 |  61.9268 |
-| has answer f1           |  68.8472  |  69.2991 |  74.2609 |
-| has answer total        |     5844  |     5844 |     5844 |
-| no answer exact         |  77.9731  |  77.8073 |  77.7409 |
-| no answer f1            |  77.9731  |  77.8073 |  77.7049 |
-| no answer total         |     6029  |     6029 |     6029 |
-| best exact              |  67.8767  |  68.2136 |  69.9570 |
-| best exact thresh       |      0.0  |      0.0 |      0.0 |
-| best f1                 |  73.4813  |  73.6195 |  76.0280 |
-| best f1 thresh          |      0.0  |      0.0 |      0.0 |
-| exact match             |  67.8767  |  68.2136 |  69.9570 |
-| f1                      |  73.4813  |  73.6195 |  76.0280 |
-| samples                 |    12166  |    12166 |    12166 |
-| total                   |    11873  |    11873 |    11873 |
+|                         |  No space |  Cleaned |    Final |    Large |
+|------------------------ |---------- |----------|----------|----------|
+| training script         |   run_qa  |   run_qa |   run_qa |   run_qa |
+| has answer exact        |  57.4606  |  58.3162 |  58.3290 |  61.9268 |
+| has answer f1           |  68.8472  |  69.2991 |  69.3629 |  74.2609 |
+| has answer total        |     5844  |     5844 |     5817 |     5844 |
+| no answer exact         |  77.9731  |  77.8073 |  77.8073 |  77.7409 |
+| no answer f1            |  77.9731  |  77.8073 |  77.8073 |  77.7049 |
+| no answer total         |     6029  |     6029 |     6029 |     6029 |
+| best exact              |  67.8767  |  68.2136 |  68.2424 |  69.9570 |
+| best exact thresh       |      0.0  |      0.0 |      0.0 |      0.0 |
+| best f1                 |  73.4813  |  73.6195 |  73.6607 |  76.0280 |
+| best f1 thresh          |      0.0  |      0.0 |      0.0 |      0.0 |
+| exact match             |  67.8767  |  68.2136 |  68.2424 |  69.9570 |
+| f1                      |  73.4813  |  73.6195 |  73.6607 |  76.0280 |
+| samples                 |    12166  |    12166 |    12138 |    12166 |
+| total                   |    11873  |    11873 |    11846 |    11873 |
+
+No space: Original data, trailing spaces removed
+Cleaned: No space + trailing dots etc removed
+Final: Cleaned + questions with empty answers removed

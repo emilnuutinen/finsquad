@@ -58,6 +58,6 @@
 | samples                 |    12166 |    12166 |    12138 |    12166 |    12138 |
 | total                   |    11873 |    11873 |    11846 |    11873 |    11846 |
 
-v1: Original data, trailing spaces removed
-v2: v1 + trailing dots etc removed
-v3: v2 + questions with empty answers removed
+- v1: Original data, trailing spaces removed
+- v2: v1 + trailing dots etc removed
+- v3: v2 + questions with empty answers removed

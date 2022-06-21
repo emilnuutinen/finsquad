@@ -5,20 +5,20 @@
 |                         | FinSQuAD  | BERT-base   | BERT-medium | BERT-large  | BERT-large* | ALBERT-XL   |
 |------------------------ |---------- |-----------  |-----------  |-----------  |------------ |----------   |
 | training script         |   run_qa  |    run_qa   |    run_qa   |    run_qa   |    run_qa   |    run_qa   |
-| has answer exact        |  58.3162  |   72.3853   |   67.7968   |   73.7348   |   80.5836   |   80.6848   |
-| has answer f1           |  69.2991  |   79.2090   |   76.1287   |   79.6422   |   86.6459   |   86.7824   |
-| has answer total        |     5844  |      5928   |   5928      |   5928      |   5928      |   5928      |
+| has answer exact        |  58.3290  |   72.3853   |   67.7968   |   73.7348   |   80.5836   |   80.6848   |
+| has answer f1           |  69.3629  |   79.2090   |   76.1287   |   79.6422   |   86.6459   |   86.7824   |
+| has answer total        |     5817  |      5928   |   5928      |   5928      |   5928      |   5928      |
 | no answer exact         |  77.8073  |   76.0807   |   64.1211   |   83.5155   |   85.0630   |   88.1412   |
 | no answer f1            |  77.8073  |   76.0807   |   64.1211   |   83.5155   |   85.0630   |   88.1412   |
 | no answer total         |     6029  |      5945   |   5945      |   5945      |   5945      |   5945      |
-| best exact              |  68.2136  |   74.2357   |   65.9647   |   78.6321   |   82.8265   |   84.4184   |
+| best exact              |  68.2424  |   74.2357   |   65.9647   |   78.6321   |   82.8265   |   84.4184   |
 | best exact thresh       |      0.0  |       0.0   |   0.0       |   0.0       |   0.0       |   0.0       |
-| best f1                 |  73.6195  |   77.6426   |   70.1247   |   81.5816   |   85.8533   |   87.4628   |
+| best f1                 |  73.6607  |   77.6426   |   70.1247   |   81.5816   |   85.8533   |   87.4628   |
 | best f1 thresh          |      0.0  |       0.0   |   0.0       |   0.0       |   0.0       |   0.0       |
-| exact match             |  68.2136  |   74.2357   |   65.9563   |   78.6321   |   82.8265   |   84.4184   |
-| f1                      |  73.6195  |   77.6426   |   70.1163   |   81.5816   |   85.8533   |   87.4628   |
-| samples                 |    12166  |     12134   |             |             |   12134     |             |
-| total                   |    11873  |     11873   |   11873     |   11873     |   11873     |   11873     |
+| exact match             |  68.2424  |   74.2357   |   65.9563   |   78.6321   |   82.8265   |   84.4184   |
+| f1                      |  73.6607  |   77.6426   |   70.1163   |   81.5816   |   85.8533   |   87.4628   |
+| samples                 |    12138  |     12134   |             |             |   12134     |             |
+| total                   |    11846  |     11873   |   11873     |   11873     |   11873     |   11873     |
 
 - FinSQuAD & Bert-base are trained by me with identical training parameters.
 - [BERT-medium](https://huggingface.co/mrm8488/bert-medium-finetuned-squadv2)
@@ -28,10 +28,10 @@
 
 ### FinSQuAD-base against other translated datasets/models (SQuAD 2.0)
 
-|     | FinSQuAD     | BERT-base es | Indobert-qa | ParSQuAD    | Swe-BERT    |
-|---  |----------    |------------  |------------ |------------ |------------ |
-| em  |   68.21      |   63.36      |   51.61     |   62.42     |   66.73     |
-| f1  |   73.62      |   70.22      |   69.09     |   65.26     |   70.11     |
+|     |     FinSQuAD | BERT-base es | Indobert-qa |    ParSQuAD |    Swe-BERT |
+|---  |------------- |------------  |------------ |------------ |------------ |
+| em  |   68.24      |   63.36      |   51.61     |   62.42     |   66.73     |
+| f1  |   73.66      |   70.22      |   69.09     |   65.26     |   70.11     |
 
 - [BERT-base es](https://huggingface.co/MMG/bert-base-spanish-wwm-cased-finetuned-sqac-finetuned-squad2-es) Spanish
 - [Indobert-qa](https://huggingface.co/Rifky/Indobert-QA) Indonesian
@@ -40,24 +40,24 @@
 
 ### FinSQuAD versions
 
-|                         |  No space |  Cleaned |    Final |    Large |
-|------------------------ |---------- |----------|----------|----------|
-| training script         |   run_qa  |   run_qa |   run_qa |   run_qa |
-| has answer exact        |  57.4606  |  58.3162 |  58.3290 |  61.9268 |
-| has answer f1           |  68.8472  |  69.2991 |  69.3629 |  74.2609 |
-| has answer total        |     5844  |     5844 |     5817 |     5844 |
-| no answer exact         |  77.9731  |  77.8073 |  77.8073 |  77.7409 |
-| no answer f1            |  77.9731  |  77.8073 |  77.8073 |  77.7049 |
-| no answer total         |     6029  |     6029 |     6029 |     6029 |
-| best exact              |  67.8767  |  68.2136 |  68.2424 |  69.9570 |
-| best exact thresh       |      0.0  |      0.0 |      0.0 |      0.0 |
-| best f1                 |  73.4813  |  73.6195 |  73.6607 |  76.0280 |
-| best f1 thresh          |      0.0  |      0.0 |      0.0 |      0.0 |
-| exact match             |  67.8767  |  68.2136 |  68.2424 |  69.9570 |
-| f1                      |  73.4813  |  73.6195 |  73.6607 |  76.0280 |
-| samples                 |    12166  |    12166 |    12138 |    12166 |
-| total                   |    11873  |    11873 |    11846 |    11873 |
+|                         |  base-v1 |  base-v2 |  base-v3 | large-v2 |
+|------------------------ |--------- |----------|----------|----------|
+| training script         |   run_qa |   run_qa |   run_qa |   run_qa |
+| has answer exact        |  57.4606 |  58.3162 |  58.3290 |  61.9268 |
+| has answer f1           |  68.8472 |  69.2991 |  69.3629 |  74.2609 |
+| has answer total        |     5844 |     5844 |     5817 |     5844 |
+| no answer exact         |  77.9731 |  77.8073 |  77.8073 |  77.7409 |
+| no answer f1            |  77.9731 |  77.8073 |  77.8073 |  77.7049 |
+| no answer total         |     6029 |     6029 |     6029 |     6029 |
+| best exact              |  67.8767 |  68.2136 |  68.2424 |  69.9570 |
+| best exact thresh       |      0.0 |      0.0 |      0.0 |      0.0 |
+| best f1                 |  73.4813 |  73.6195 |  73.6607 |  76.0280 |
+| best f1 thresh          |      0.0 |      0.0 |      0.0 |      0.0 |
+| exact match             |  67.8767 |  68.2136 |  68.2424 |  69.9570 |
+| f1                      |  73.4813 |  73.6195 |  73.6607 |  76.0280 |
+| samples                 |    12166 |    12166 |    12138 |    12166 |
+| total                   |    11873 |    11873 |    11846 |    11873 |
 
-No space: Original data, trailing spaces removed
-Cleaned: No space + trailing dots etc removed
-Final: Cleaned + questions with empty answers removed
+v1: Original data, trailing spaces removed
+v2: v1 + trailing dots etc removed
+v3: v2 + questions with empty answers removed

@@ -64,7 +64,7 @@
 
 ### Testing Eng -> Fin -> Eng translation
 
-|                         |   Eng-v3 | BERT-base |
+|                         |   Eng-MT | BERT-base |
 |------------------------ |--------- |---------- |
 | training script         |   run_qa |    run_qa |
 | has answer exact        |  48.2747 |   72.3853 |
@@ -82,6 +82,6 @@
 | samples                 |    12110 |     12134 |
 | total                   |    11873 |     11873 |
 
-- v3: Same as Finnish v3, but Eng -> Fin -> Eng translated
+- Eng-MT: Same as Finnish v3, but Eng -> Fin -> Eng translated
 - BERT-base: Using the Hugginface dataset and BERT-base model
 - Same training arguments with both models

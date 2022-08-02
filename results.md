@@ -61,3 +61,27 @@
 - v1: Original data, trailing spaces removed
 - v2: v1 + trailing dots etc removed
 - v3: v2 + questions with empty answers removed
+
+### Testing Eng -> Fin -> Eng translation
+
+|                         |   Eng-v3 | BERT-base |
+|------------------------ |--------- |---------- |
+| training script         |   run_qa |    run_qa |
+| has answer exact        |  48.2747 |   72.3853 |
+| has answer f1           |  64.3265 |   79.2090 |
+| has answer total        |     5825 |      5928 |
+| no answer exact         |  73.2804 |   76.0807 |
+| no answer f1            |  73.2804 |   76.0807 |
+| no answer total         |     6048 |      5945 |
+| best exact              |  61.0224 |   74.2357 |
+| best exact thresh       |      0.0 |       0.0 |
+| best f1                 |  68.8874 |   77.6426 |
+| best f1 thresh          |      0.0 |       0.0 |
+| exact match             |  61.0124 |   74.2357 |
+| f1                      |  68.8876 |   77.6426 |
+| samples                 |    12110 |     12134 |
+| total                   |    11873 |     11873 |
+
+- v3: Same as Finnish v3, but Eng -> Fin -> Eng translated
+- BERT-base: Using the Hugginface dataset and BERT-base model
+- Same training arguments with both models

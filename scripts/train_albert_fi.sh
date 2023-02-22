@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=albert_en_translated
+#SBATCH --job-name=albert_fi
 #SBATCH --account=project_2002820
 #SBATCH --partition=gpu
 #SBATCH --time=12:00:00
@@ -12,7 +12,7 @@ module load pytorch/1.11
 
 srun python run_qa.py \
   --model_name_or_path albert-base-v2 \
-  --dataset_name squad_en.py \
+  --dataset_name squad_fi.py \
   --version_2_with_negative \
   --do_train \
   --do_eval \
@@ -21,5 +21,4 @@ srun python run_qa.py \
   --num_train_epochs 2 \
   --max_seq_length 384 \
   --doc_stride 128 \
-  --output_dir tmp/en_tran_albert-base-v2/
-
+  --output_dir tmp/fi_albert-base-v2/

@@ -11,6 +11,7 @@ python run_qa.py \
   --model_name_or_path bert-base-finnish-cased-v1/ \
   --dataset_name squad_fi.py \
   --version_2_with_negative \
+  --overwrite_cache \
   --do_train \
   --do_eval \
   --per_device_train_batch_size 12 \
@@ -28,6 +29,7 @@ python run_qa.py \
   --model_name_or_path bert-base-finnish-cased-v1/ \
   --dataset_name squad_fi.py \
   --version_2_with_negative \
+  --overwrite_cache \
   --do_eval \
   --output_dir tmp/debug_squad/
 ```
@@ -39,6 +41,7 @@ python run_qa.py \
   --model_name_or_path bert-base-uncased \
   --dataset_name squad_v2 \
   --version_2_with_negative \
+  --overwrite_cache \
   --do_train \
   --do_eval \
   --per_device_train_batch_size 12 \

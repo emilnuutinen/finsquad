@@ -4,8 +4,8 @@ Training scripts are based on Hugginface [examples](https://github.com/huggingfa
 
 ## Results
 
-**Fine-tuned model**: https://huggingface.co/TurkuNLP/bert-base-finnish-cased-squad2
-**Finnish SQuAD2 dataset**: https://huggingface.co/datasets/TurkuNLP/squad_v2_fi
+- **Fine-tuned model**: https://huggingface.co/TurkuNLP/bert-base-finnish-cased-squad2
+- **Finnish SQuAD2 dataset**: https://huggingface.co/datasets/TurkuNLP/squad_v2_fi
 
 ### Training examples
 

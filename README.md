@@ -1,10 +1,15 @@
 # Fine-tune FinBERT for Finnish SQuAD 2.0
 
-(Taken from https://github.com/huggingface/transformers/tree/main/examples/pytorch/question-answering)
+Training scripts are based on Hugginface [examples](https://github.com/huggingface/transformers/tree/main/examples/pytorch/question-answering)
 
-Model: https://huggingface.co/TurkuNLP/bert-base-finnish-uncased-v1
+## Results
 
-### Training
+**Fine-tuned model**: https://huggingface.co/TurkuNLP/bert-base-finnish-cased-squad2
+**Finnish SQuAD2 dataset**: https://huggingface.co/datasets/TurkuNLP/squad_v2_fi
+
+### Training examples
+
+**Train Finnish BERT-base**
 
 ```bash
 python run_qa.py \
@@ -19,10 +24,10 @@ python run_qa.py \
   --num_train_epochs 2 \
   --max_seq_length 384 \
   --doc_stride 128 \
-  --output_dir tmp/debug_squad/
+  --output_dir tmp/bert-base-finnish-cased-squad2/
 ```
 
-Only evaluation:
+**Only evaluation**
 
 ```bash
 python run_qa.py \
@@ -31,10 +36,10 @@ python run_qa.py \
   --version_2_with_negative \
   --overwrite_cache \
   --do_eval \
-  --output_dir tmp/debug_squad/
+  --output_dir tmp/bert-base-finnish-cased-squad2_eval/
 ```
 
-**Train English base BERT**
+**Train English BERT-base**
 
 ```bash
 python run_qa.py \
@@ -49,6 +54,6 @@ python run_qa.py \
   --num_train_epochs 2 \
   --max_seq_length 384 \
   --doc_stride 128 \
-  --output_dir tmp/debug_squad_en/
+  --output_dir tmp/bert-base-uncased-squad2/
 ```
 
